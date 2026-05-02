@@ -1,29 +1,30 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import logo from '../assets/stryde_logo.png';
 
 const groups = [
   {
-    title: 'Product',
+    title: 'Explore',
     links: [
-      { label: 'Nexus Invite', to: '/invite/midnight-tempo' },
-      { label: 'Public Run', to: '/run/evening-solo' },
-      { label: 'Nexus Summary', to: '/nexus/midnight-tempo' },
+      { label: 'Home', to: '/' },
+      { label: 'Nexus', to: '/nexus' },
+      { label: 'Story', to: '/story' },
+      { label: 'For Brands', to: '/brands' },
     ],
   },
   {
-    title: 'Trust',
+    title: 'For runners',
     links: [
-      { label: 'Support', to: '/support' },
-      { label: 'Privacy', to: '/privacy' },
-      { label: 'Terms', to: '/terms' },
+      { label: 'Discovery', to: '/#discovery' },
+      { label: 'Trust', to: '/#trust' },
+      { label: 'Sharing', to: '/#sharing' },
     ],
   },
   {
-    title: 'Later',
+    title: 'Company',
     links: [
-      { label: 'App Store', to: '/support' },
-      { label: 'Play Store', to: '/support' },
-      { label: 'Share Gallery', to: '/run/evening-solo' },
+      { label: 'Team', to: '/story' },
+      { label: 'Privacy Policy', to: '/privacy' },
+      { label: 'Partnerships', to: '/brands' },
     ],
   },
 ];
@@ -61,7 +62,7 @@ export default function Footer() {
             <span className="text-xl font-black text-text">Stryde</span>
           </Link>
           <p className="mt-4 max-w-sm leading-7 text-muted">
-            A web layer for Stryde invites, shared runs, Nexus summaries, trust pages, and app handoff.
+            Running re-imagined for discovery, trust, and sharing. Nexus brings the live social layer to every run.
           </p>
           <div className="mt-6 flex gap-3">
             {socials.map(({ label, href, icon: Icon }) => (
@@ -96,7 +97,7 @@ export default function Footer() {
         </div>
       </div>
       <p className="mx-auto mt-10 max-w-7xl text-sm text-muted">
-        (c) 2026 Stryde. Built for invites, shared runs, and trustworthy app handoff.
+        (c) 2026 Stryde. Built for runners, communities, and the live moments that bring them together.
       </p>
     </footer>
   );
