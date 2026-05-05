@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Nexus from "./pages/Nexus";
 import Story from "./pages/Story";
 import Brands from "./pages/Brands";
+import Privacy from "./pages/Privacy";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="nexus" element={<Nexus />} />
         <Route path="story" element={<Story />} />
         <Route path="brands" element={<Brands />} />
+        <Route path="privacy" element={<Privacy />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

@@ -1,32 +1,14 @@
 ﻿import { Link } from 'react-router-dom';
 import logo from '../assets/stryde_logo.png';
 
-const groups = [
-  {
-    title: 'Explore',
-    links: [
-      { label: 'Home', to: '/' },
-      { label: 'Nexus', to: '/nexus' },
-      { label: 'Story', to: '/story' },
-      { label: 'For Brands', to: '/brands' },
-    ],
-  },
-  {
-    title: 'For runners',
-    links: [
-      { label: 'Discovery', to: '/#discovery' },
-      { label: 'Trust', to: '/#trust' },
-      { label: 'Sharing', to: '/#sharing' },
-    ],
-  },
-  {
-    title: 'Company',
-    links: [
-      { label: 'Team', to: '/story' },
-      { label: 'Privacy Policy', to: '/privacy' },
-      { label: 'Partnerships', to: '/brands' },
-    ],
-  },
+const footerLinks = [
+  { label: 'Home', to: '/' },
+  { label: 'Nexus', to: '/nexus' },
+  { label: 'Story', to: '/story' },
+  { label: 'For Brands', to: '/brands' },
+  { label: 'Team', to: '/story' },
+  { label: 'Privacy Policy', to: '/privacy' },
+  { label: 'Partnerships', to: '/brands' },
 ];
 
 const socials = [
@@ -82,20 +64,11 @@ export default function Footer() {
             <a href="https://apps.apple.com/in/app/stryde/id6759480506" target="_blank" rel="noreferrer" className="text-muted hover:text-mint">Try Stryde on iOS</a>
           </div>
         </div>
-        <div className="grid gap-8 sm:grid-cols-3">
-          {groups.map((group) => (
-            <div key={group.title}>
-              <h2 className="text-sm font-bold uppercase tracking-[0.18em] text-text">{group.title}</h2>
-              <ul className="mt-4 space-y-3">
-                {group.links.map((link) => (
-                  <li key={link.label}>
-                    <Link className="text-muted transition hover:text-mint" to={link.to}>
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div className="flex flex-wrap gap-x-8 gap-y-2 items-center mt-8">
+          {footerLinks.map((link) => (
+            <Link key={link.label} className="text-muted transition hover:text-mint text-sm font-medium" to={link.to}>
+              {link.label}
+            </Link>
           ))}
         </div>
       </div>
