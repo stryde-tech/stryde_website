@@ -55,23 +55,3 @@ export const shareAssets = {
   ],
 };
 
-export const sampleRun = {
-  runner: "Aarav Mehta",
-  title: "Evening Solo Run",
-  city: "Mumbai",
-  distance: "7.42 km",
-  pace: "4:36 / km",
-  duration: "34:08",
-  elevation: "82 m",
-  streak: "18 days",
-};
-
-export const sampleNexusSummary = {
-  title: "Midnight Tempo Nexus",
-  window: "Friday 21:00 - Saturday 02:00",
-  runners: "2,418",
-  distance: "5K",
-  city: "Global",
-  winner: "Maya Rao",
-  topPace: "4:08 / km",
-};

@@ -1,31 +1,14 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import logo from '../assets/stryde_logo.png';
 
-const groups = [
-  {
-    title: 'Product',
-    links: [
-      { label: 'Nexus Invite', to: '/invite/midnight-tempo' },
-      { label: 'Public Run', to: '/run/evening-solo' },
-      { label: 'Nexus Summary', to: '/nexus/midnight-tempo' },
-    ],
-  },
-  {
-    title: 'Trust',
-    links: [
-      { label: 'Support', to: '/support' },
-      { label: 'Privacy', to: '/privacy' },
-      { label: 'Terms', to: '/terms' },
-    ],
-  },
-  {
-    title: 'Later',
-    links: [
-      { label: 'App Store', to: '/support' },
-      { label: 'Play Store', to: '/support' },
-      { label: 'Share Gallery', to: '/run/evening-solo' },
-    ],
-  },
+const footerLinks = [
+  { label: 'Home', to: '/' },
+  { label: 'Nexus', to: '/nexus' },
+  { label: 'Story', to: '/story' },
+  { label: 'For Brands', to: '/brands' },
+  { label: 'Team', to: '/story' },
+  { label: 'Privacy Policy', to: '/privacy' },
+  { label: 'Partnerships', to: '/brands' },
 ];
 
 const socials = [
@@ -61,7 +44,7 @@ export default function Footer() {
             <span className="text-xl font-black text-text">Stryde</span>
           </Link>
           <p className="mt-4 max-w-sm leading-7 text-muted">
-            A web layer for Stryde invites, shared runs, Nexus summaries, trust pages, and app handoff.
+            Running re-imagined for discovery, trust, and sharing. Nexus brings the live social layer to every run.
           </p>
           <div className="mt-6 flex gap-3">
             {socials.map(({ label, href, icon: Icon }) => (
@@ -77,26 +60,20 @@ export default function Footer() {
               </a>
             ))}
           </div>
+          <div className="mt-4">
+            <a href="https://apps.apple.com/in/app/stryde/id6759480506" target="_blank" rel="noreferrer" className="text-muted hover:text-mint">Try Stryde on iOS</a>
+          </div>
         </div>
-        <div className="grid gap-8 sm:grid-cols-3">
-          {groups.map((group) => (
-            <div key={group.title}>
-              <h2 className="text-sm font-bold uppercase tracking-[0.18em] text-text">{group.title}</h2>
-              <ul className="mt-4 space-y-3">
-                {group.links.map((link) => (
-                  <li key={link.label}>
-                    <Link className="text-muted transition hover:text-mint" to={link.to}>
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div className="flex flex-wrap gap-x-8 gap-y-2 items-center mt-8">
+          {footerLinks.map((link) => (
+            <Link key={link.label} className="text-muted transition hover:text-mint text-sm font-medium" to={link.to}>
+              {link.label}
+            </Link>
           ))}
         </div>
       </div>
       <p className="mx-auto mt-10 max-w-7xl text-sm text-muted">
-        (c) 2026 Stryde. Built for invites, shared runs, and trustworthy app handoff.
+        (c) 2026 Stryde. Built for runners, communities, and the live moments that bring them together.
       </p>
     </footer>
   );

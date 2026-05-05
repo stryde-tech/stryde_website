@@ -1,4 +1,4 @@
-import { Menu, X } from 'lucide-react';
+﻿import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/stryde_logo.png';
@@ -6,10 +6,9 @@ import Button from './Button';
 
 const navLinks = [
   { label: 'Home', to: '/' },
-  { label: 'Nexus Invite', to: '/invite/midnight-tempo' },
-  { label: 'Run Share', to: '/run/evening-solo' },
-  { label: 'Nexus Summary', to: '/nexus/midnight-tempo' },
-  { label: 'Support', to: '/support' },
+  { label: 'Nexus', to: '/nexus' },
+  { label: 'Story', to: '/story' },
+  { label: 'For Brands', to: '/brands' },
 ];
 
 export default function Navbar() {
@@ -40,7 +39,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:block">
-          <Button size="sm" to="/support">Get App Updates</Button>
+          <Button size="sm" to="mailto:hq.stryde@gmail.com">Contact Stryde</Button>
         </div>
 
         <button
@@ -62,7 +61,7 @@ export default function Navbar() {
                 {link.label}
               </NavLink>
             ))}
-            <Button className="mt-2 w-full" to="/support">Get App Updates</Button>
+            <Button className="mt-2 w-full" to="mailto:hq.stryde@gmail.com">Contact Stryde</Button>
           </div>
         </div>
       ) : null}
