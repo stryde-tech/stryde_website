@@ -52,10 +52,10 @@ const platformPillars = [
 ];
 
 const userValue = [
-  "Discover live communities, run moments, and local competition before opening the app.",
-  "Trust the session through real presence, shared progress, and clear public previews.",
-  "Share proof after the run so participation becomes the invite for the next one.",
-  "Build consistency through streaks, stats, leaderboards, and purposeful challenges.",
+  "Find live runs, local challenges, and people nearby before you lace up.",
+  "Know who is joining, what is happening, and how everyone is moving together.",
+  "Share your run after it ends and invite more friends into the next one.",
+  "Stay consistent with streaks, stats, leaderboards, and simple goals.",
 ];
 
 export default function Home() {
@@ -71,18 +71,10 @@ export default function Home() {
               Running is better with friends.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-muted sm:text-xl">
-              Stryde lets you run live with friends—no matter where they are. Start a group run, see everyone’s progress in real time, and stay motivated together. Compete on local leaderboards, join fun challenges, and keep coming back for more. No jargon, just real connection and motivation.
-            </p>
-            <ul className="mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg list-disc list-inside">
-              <li>Run together, live—even across cities</li>
-              <li>See friends’ progress and cheer each other on</li>
-              <li>Compete on local leaderboards</li>
-              <li>Join simple, fun challenges</li>
-              <li>Stay consistent with social accountability</li>
-            </ul>
+              Stryde lets you run live with friends—no matter where they are. Start a group run, see everyone’s progress in real time, and stay motivated together.
+              <br /></p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button showIcon size="lg" to="/nexus">Try a live run</Button>
-              <Button showIcon size="lg" to="/story" variant="secondary">How it works</Button>
+              <Button showIcon size="lg" to="https://apps.apple.com/in/app/stryde/id6759480506" variant="primary">Try Stryde on iOS</Button>
             </div>
           </div>
 
@@ -151,9 +143,9 @@ export default function Home() {
       <section id="trust" className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
-            eyebrow="Product at a glance"
-            title="A web surface for the movement around the app."
-            description="The site explains Stryde, builds confidence before install, opens shared content, and makes Nexus participation feel credible outside the mobile experience."
+            eyebrow="At a glance"
+            title="Everything runners need before, during, and after a run."
+            description="Stryde helps people find runs, join with confidence, stay connected while they move, and share the moments that bring friends back next time."
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {platformPillars.map((feature) => (
@@ -175,9 +167,9 @@ export default function Home() {
             align="left"
             eyebrow="Shareability"
             title="Every run can become the reason someone else joins."
-            description="Public run pages, Nexus summaries, and share-card templates make Stryde content useful when it lands in chats, stories, and community spaces."
+            description="Public run pages, Nexus summaries, and share cards make every invite easy to open, understand, and pass along."
           />
-          <ShareGallery items={[shareAssets.nexus[0], shareAssets.nexus[1], shareAssets.solo[0]]} />
+          <ShareGallery items={[shareAssets.nexus[1], shareAssets.solo[0]]} />
         </div>
       </section>
 
@@ -192,7 +184,7 @@ export default function Home() {
               align="left"
               eyebrow="Accountability"
               title="Real-time motivation becomes long-term consistency."
-              description="Stryde connects live participation with progress after the run: streaks, pace trends, heatmaps, local rankings, and challenges that give people a reason to return."
+              description="Stryde keeps the energy going after each run with streaks, pace trends, heatmaps, local rankings, and challenges worth coming back to."
             />
             <div className="mt-8 grid gap-3">
               {userValue.map((item) => (
@@ -211,21 +203,21 @@ export default function Home() {
             <Route aria-hidden="true" className="mb-5 h-7 w-7 text-mint" />
             <h2 className="text-2xl font-black text-text">Discovery before the run</h2>
             <p className="mt-3 leading-7 text-muted">
-              Invites, public previews, and community context help runners understand what is happening before they commit.
+              Invites and public previews show runners what is happening, who is joining, and why it is worth showing up.
             </p>
           </div>
           <div className="glass-card rounded-2xl p-6">
             <HeartPulse aria-hidden="true" className="mb-5 h-7 w-7 text-lavender" />
             <h2 className="text-2xl font-black text-text">Trust while it is live</h2>
             <p className="mt-3 leading-7 text-muted">
-              Presence, location-aware progress, and live metrics make Nexus feel active, real, and worth joining.
+              Live progress, pace, and presence make every Nexus feel active, real, and easy to follow.
             </p>
           </div>
           <div className="glass-card rounded-2xl p-6">
             <Map aria-hidden="true" className="mb-5 h-7 w-7 text-sky" />
             <h2 className="text-2xl font-black text-text">Sharing after it ends</h2>
             <p className="mt-3 leading-7 text-muted">
-              Run cards, maps, rankings, and summaries let participation travel beyond the app and pull people back in.
+              Run cards, maps, rankings, and summaries help runners celebrate the effort and invite the next group.
             </p>
           </div>
         </div>
@@ -236,12 +228,12 @@ export default function Home() {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-mint">Take a stryde in the right direction</p>
-              <h2 className="mt-3 text-3xl font-black text-text">A credible web layer for a social running product.</h2>
+              <h2 className="mt-3 text-3xl font-black text-text">Bring your running community together.</h2>
               <p className="mt-3 max-w-2xl leading-7 text-muted">
-                Stryde helps runners discover live communities, trust the session they are joining, and share the proof that keeps the movement growing.
+                Stryde helps runners find live communities, join runs with confidence, and share the moments that keep everyone moving.
               </p>
             </div>
-            <Button showIcon size="lg" to="/support">Contact Stryde</Button>
+            <Button showIcon size="lg" to="mailto:hq.stryde@gmail.com">Contact Stryde</Button>
           </div>
         </div>
       </section>

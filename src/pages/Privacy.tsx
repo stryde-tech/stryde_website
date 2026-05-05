@@ -36,7 +36,7 @@ export default function Privacy() {
         <div className="glass-card mt-10 rounded-2xl p-6">
           <h2 className="text-2xl font-black text-text">Data deletion requests</h2>
           <p className="mt-3 leading-7 text-muted">
-            Until an automated deletion portal exists, users can request deletion from the support page. This page should later be replaced with final legal language and a dedicated request form.
+            Until an automated deletion portal exists, users can request deletion by emailing us at <a href="mailto:hq.stryde@gmail.com" className="text-primary underline">hq.stryde@gmail.com</a>. This page should later be replaced with final legal language and a dedicated request form.
           </p>
         </div>
       </div>

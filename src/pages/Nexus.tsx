@@ -47,7 +47,7 @@ export default function Nexus() {
               Nexus is the core Stryde experience: real-time group running with live presence, shared progress, local competition, and social proof after the run.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button showIcon size="lg" to="/support">Bring Nexus to your community</Button>
+              <Button showIcon size="lg" to="mailto:hq.stryde@gmail.com">Bring Nexus to your community</Button>
               <Button showIcon size="lg" to="/story" variant="secondary">Why we are building this</Button>
             </div>
           </div>

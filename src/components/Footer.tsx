@@ -78,6 +78,9 @@ export default function Footer() {
               </a>
             ))}
           </div>
+          <div className="mt-4">
+            <a href="https://apps.apple.com/in/app/stryde/id6759480506" target="_blank" rel="noreferrer" className="text-muted hover:text-mint">Try Stryde on iOS</a>
+          </div>
         </div>
         <div className="grid gap-8 sm:grid-cols-3">
           {groups.map((group) => (
