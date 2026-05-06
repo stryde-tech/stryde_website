@@ -1,4 +1,6 @@
 import SectionHeading from "../components/SectionHeading";
+import FeatureCard from "../components/FeatureCard";
+import { Database, Lock, HeartPulse, Trash2 } from "lucide-react";
 
 const policyMeta = [
   { label: "Effective Date", value: "May 1, 2026" },
