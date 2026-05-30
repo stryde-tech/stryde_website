@@ -7,10 +7,13 @@ import PublicNexusSummary from "./pages/PublicNexusSummary";
 import PublicRunShare from "./pages/PublicRunShare";
 import Support from "./pages/Support";
 import Terms from "./pages/Terms";
+import Invite from "./pages/Invite";
 
 export default function App() {
   return (
     <Routes>
+      {/* Standalone deeplink landing page — no navbar/footer. */}
+      <Route path="invite" element={<Invite />} />
       <Route element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="invite/:inviteId" element={<NexusInvite />} />
