@@ -1,4 +1,6 @@
 import SectionHeading from "../components/SectionHeading";
+import FeatureCard from "../components/FeatureCard";
+import { Database, Lock, HeartPulse, Trash2 } from "lucide-react";
 
 const policyMeta = [
   { label: "Effective Date", value: "May 1, 2026" },
@@ -201,55 +203,34 @@ export default function Privacy() {
           title="Privacy policy for Stryde"
           description="This Privacy Policy explains how Stryde collects, uses, discloses, and protects information when you use the Stryde mobile app and related services."
         />
-
-        <article className="glass-card mt-12 rounded-2xl p-6 sm:p-8 lg:p-10">
-          <dl className="grid gap-4 border-b border-border pb-8 sm:grid-cols-2">
-            {policyMeta.map((item) => (
-              <div key={item.label}>
-                <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-mint">
-                  {item.label}
-                </dt>
-                <dd className="mt-2 text-sm leading-6 text-text sm:text-base">{item.value}</dd>
-              </div>
-            ))}
-          </dl>
-
-          <div className="mt-8 space-y-8">
-            <div className="leading-7 text-muted">
-              <p>
-                Stryde ("we," "our," or "us") respects your privacy. This Privacy Policy explains
-                how we collect, use, disclose, and protect your information when you use the Stryde
-                mobile app and related services (the "Service").
-              </p>
-              <p className="mt-4">By using Stryde, you agree to this Privacy Policy.</p>
-            </div>
-
-            {sections.map((section) => (
-              <section key={section.title} className="border-t border-border pt-8">
-                <h2 className="text-2xl font-black leading-tight text-text">{section.title}</h2>
-                {section.intro?.map((paragraph) => (
-                  <p key={paragraph} className="mt-4 leading-7 text-muted">
-                    {paragraph}
-                  </p>
-                ))}
-                {section.groups?.map((group, groupIndex) => (
-                  <div key={`${section.title}-${group.heading ?? groupIndex}`} className="mt-5">
-                    {group.heading ? (
-                      <h3 className="text-base font-bold text-primary">{group.heading}</h3>
-                    ) : null}
-                    <ul className="mt-3 space-y-2 pl-5 text-muted">
-                      {group.items.map((item) => (
-                        <li key={item} className="list-disc leading-7">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </section>
-            ))}
-          </div>
-        </article>
+        <div className="mt-12 grid gap-5 md:grid-cols-2">
+          <FeatureCard
+            description="Run data can include location, distance, pace, timing, and device-derived activity metadata."
+            icon={Database}
+            title="Data we handle"
+          />
+          <FeatureCard
+            description="Shared run pages should expose only the information a runner chooses to share publicly."
+            icon={Lock}
+            title="Public sharing"
+          />
+          <FeatureCard
+            description="Apple Health import and deduping should be transparent, permission-based, and reversible."
+            icon={HeartPulse}
+            title="Apple Health"
+          />
+          <FeatureCard
+            description="Users should be able to request account and activity deletion through support."
+            icon={Trash2}
+            title="Data deletion"
+          />
+        </div>
+        <div className="glass-card mt-10 rounded-2xl p-6">
+          <h2 className="text-2xl font-black text-text">Data deletion requests</h2>
+          <p className="mt-3 leading-7 text-muted">
+            Until an automated deletion portal exists, users can request deletion by emailing us at <a href="mailto:hq.stryde@gmail.com" className="text-primary underline">hq.stryde@gmail.com</a>. This page should later be replaced with final legal language and a dedicated request form.
+          </p>
+        </div>
       </div>
     </section>
   );
