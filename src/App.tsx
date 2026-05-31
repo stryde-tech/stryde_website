@@ -5,10 +5,6 @@ import Nexus from "./pages/Nexus";
 import Story from "./pages/Story";
 import Brands from "./pages/Brands";
 import Privacy from "./pages/Privacy";
-import PublicNexusSummary from "./pages/PublicNexusSummary";
-import PublicRunShare from "./pages/PublicRunShare";
-import Support from "./pages/Support";
-import Terms from "./pages/Terms";
 import Invite from "./pages/Invite";
 
 export default function App() {
