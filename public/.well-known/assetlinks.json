@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "today.stryde.app",
+    "sha256_cert_fingerprints": ["2A:40:22:F9:61:73:68:89:C7:59:6C:FB:CE:AD:E9:0A:D4:D0:8E:9D:C5:45:C1:2C:42:AD:9D:C8:5B:CE:10:4C"]
+  }
+}]
